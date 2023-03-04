@@ -69,24 +69,17 @@ interface HeaderSimpleProps {
 
 export const HeaderSimple = ({ links }: HeaderSimpleProps) => {
   const [opened, { toggle }] = useDisclosure(false);
-  // const [active, setActive] = useState(links[0].link);
   const { classes, cx } = useStyles();
 
   const items = links.map((link) => (
     <li key={link.label} style={{ listStyle: 'none' }}>
       <NavLink
         to={link.link}
-        // className={(data) => (data.isActive ? 'linkActive' : 'link')}
         className={({ isActive }) =>
           cx(classes.link, {
             [classes.linkActive]: isActive,
           })
         }
-        //   onClick={() => {
-        //     // event.preventDefault();
-        //     setActive(link.link);
-        //   }
-        // }
       >
         {link.label}
       </NavLink>
