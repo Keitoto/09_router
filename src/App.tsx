@@ -3,8 +3,10 @@ import { Route, Routes } from 'react-router-dom';
 
 import { HeaderSimple } from '@/components/Header';
 import { AboutPage } from '@/pages/About';
+import { ContactPage } from '@/pages/Contact';
 import { ErrorPage } from '@/pages/Error';
 import { HomePage } from '@/pages/Home';
+import { UserListPage } from '@/pages/UserList';
 
 const navLinks = [
   { label: 'Home', link: '/' },
@@ -21,6 +23,8 @@ const App = () => {
           <Routes>
             <Route path="/" element={<HomePage />} />
             <Route path="/about" element={<AboutPage />} />
+            <Route path="/users" element={<UserListPage />} />
+            <Route path="/contact" element={<ContactPage />} />
             <Route path="*" element={<ErrorPage />} />
           </Routes>
         </Container>
