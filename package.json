@@ -19,8 +19,7 @@
     "react-router-dom": "^6.8.2",
     "swr": "^2.0.4",
     "tabler-icons-react": "^1.56.0",
-    "yup": "^1.0.2",
-    "zustand": "^4.3.5"
+    "yup": "^1.0.2"
   },
   "devDependencies": {
     "@types/node": "^18.14.6",
