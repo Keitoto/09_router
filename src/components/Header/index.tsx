@@ -7,8 +7,9 @@ import {
   rem,
 } from '@mantine/core';
 import { useDisclosure } from '@mantine/hooks';
-// import { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+
+import { ActionToggle } from '@/components/Header/ActionToggle';
 
 const useStyles = createStyles((theme) => ({
   header: {
@@ -89,7 +90,7 @@ export const HeaderSimple = ({ links }: HeaderSimpleProps) => {
   return (
     <Header height={60} mb={120}>
       <Container className={classes.header} fluid>
-        <div>toggle</div>
+        <ActionToggle />
         <Group spacing={5} className={classes.links}>
           {items}
         </Group>
